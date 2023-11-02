@@ -263,17 +263,17 @@ ol {
 
 .search-form__pseudo-checkbox {
   position: relative;
-  inline-size: 19px;
-  block-size: 19px;
   border: 1px solid #fff;
   padding: 1px;
+  inline-size: 19px;
+  block-size: 19px;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
   content: '';
-  position: absolute;
-  inset: 1px;
+  position: relative;
+  display: block;
+  background-color: #fff;
   inline-size: 15px;
   block-size: 15px;
-  background-color: #fff;
 }
