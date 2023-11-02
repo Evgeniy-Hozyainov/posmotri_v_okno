@@ -9,13 +9,16 @@ html {
 }
 
 .page {
-  inline-size: 1200px;
-  block-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  inline-size: 1200px;
+  block-size: 100%;
 }
 
 h1,
@@ -35,4 +38,242 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.content {
+  display: flex;
+  gap: 30px;
+  /* inline-size: 1140px; */
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 16px;
+  inline-size: 711px;
+}
+
+.result__video-container {
+  position: relative;
+  inline-size: 100%;
+  block-size: 386px;
+}
+
+.result__video {
+  object-fit: cover;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.content__details {
+  inline-size: 399px;
+}
+
+.title {
+  margin-block-end: 25px;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 75px;
+  font-style: normal;
+  line-height: 94%; /* 70.5px */
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__list {
+  position: relative;
+  padding-block-end: 2px;
+  overflow: hidden auto;
+  block-size: 298px;
+  scrollbar-width: thin;
+}
+
+.content__list > li:not(:last-child) {
+  margin-block-end: 30px;
+}
+
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.content__video-card-description-container {
+  flex-shrink: 0;
+  padding: 4px 2px 2px 2px;
+  inline-size: 200px;
+}
+
+.content__video-card-thumbnail {
+  align-self: center;
+  object-fit: cover;
+  overflow: auto;   /* fix */
+  inline-size: 100%;
+}
+
+.content__card-link {
+  display: block;
+  margin: 1px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link:focus-visible {
+  outline: none;
+}
+
+.content__card-link:focus-visible > .content__video-card {
+  outline: 1px solid #fff;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__video-card-title {
+  margin-block-end: 6px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%; /* 30px */
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+.content__video-card-description {
+  line-height: 16.2px; /* 90% */
+}
+
+/* Common elements styles*/
+.button {
+  border: 1px solid #fff;
+  padding-block-start: 5px;
+  padding-block-end: 5px;
+  color: #fff;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: transparent;
+  cursor: pointer;
+  inline-size: 100%;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  text-decoration: none;
+  background: #545050;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Form styles */
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 40px;
+  padding-bottom: 2px;
+}
+
+.search-form__fieldset {
+  flex-grow: 1;
+  border: none;
+}
+
+.search-form__fieldset-title {
+  margin-block-end: 5px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.search-form__label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+}
+
+.search-form__label:hover > .search-form__label-text {
+  text-decoration: underline;
+}
+
+.search-form__label-text {
+  margin-inline-start: 5px;
+}
+
+.search-form__textfield {
+  border: none;
+  border-block-start: 1px solid #fff;
+  border-block-end: 1px solid #fff;
+  color: #fff;
+  font-family: Fira Sans Condensed;
+  font-weight: 400;
+  font-size: 18px;
+  background-color: transparent;
+  appearance: none;
+  min-inline-size: 225px;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__submit-button {
+  flex: 1 1 0%;
+  min-inline-size: 194px;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;  
+  margin-block-end: 5px;
+}
+
+.search-form__pseudo-checkbox {
+  position: relative;
+  inline-size: 19px;
+  block-size: 19px;
+  border: 1px solid #fff;
+  padding: 1px;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  inline-size: 15px;
+  block-size: 15px;
+  background-color: #fff;
 }
