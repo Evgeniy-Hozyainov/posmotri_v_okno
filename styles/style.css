@@ -98,6 +98,10 @@ ol {
   margin-block-end: 30px;
 }
 
+.content__list > li:has(.more-button) {
+  margin: 0 2px;
+}
+
 .content__video-card {
   display: flex;
   justify-content: space-between;
@@ -157,10 +161,6 @@ ol {
 
 .content__video-card-description {
   line-height: 16.2px; /* 90% */
-}
-
-li:has(.more-button) {
-  margin: 0 2px;
 }
 
 /* Common elements styles*/
