@@ -98,7 +98,7 @@ ol {
   margin-block-end: 30px;
 }
 
-.content__list > li:has(.more-button) {
+.content__list > li:not(.content__list-item) {
   margin: 0 2px;
 }
 
@@ -117,7 +117,7 @@ ol {
   align-self: stretch;
   object-fit: cover;
   overflow: auto; /* fix */
-  min-block-size: 103px;
+  min-block-size: 104px;
   inline-size: 100%;
 }
 
@@ -156,6 +156,7 @@ ol {
   font-size: 30px;
   text-transform: uppercase;
   text-overflow: ellipsis;
+  white-space: nowrap;
   /* word-wrap: break-word; */
 }
 
@@ -163,7 +164,7 @@ ol {
   line-height: 16.2px; /* 90% */
 }
 
-/* Common elements styles*/
+/* Buttons styles*/
 .button {
   border: 1px solid #fff;
   padding-block-start: 5px;
@@ -195,6 +196,7 @@ ol {
   outline-offset: 1px;
 }
 
+/* Visually hidden */
 .visually-hidden {
   position: absolute;
   overflow: hidden;
